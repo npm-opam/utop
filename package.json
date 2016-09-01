@@ -41,7 +41,6 @@
         "lambda-term": "https://github.com/npm-opam/lambda-term",
         "base-unix": "https://github.com/npm-opam/base-unix",
         "ocamlfind": "https://github.com/npm-opam/ocamlfind",
-        "camlp4": "https://github.com/npm-opam/camlp4",
         "ocaml": "https://github.com/npm-opam/ocaml.git#npm-4.02.3",
         "lwt": "https://github.com/npm-opam/lwt",
         "dependency-env": "https://github.com/npm-ml/dependency-env.git",
