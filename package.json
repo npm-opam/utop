@@ -1,0 +1,58 @@
+{
+    "version": "1.19.2",
+    "exportedEnvVars": {
+        "utop_version": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "1.19.2"
+        },
+        "utop_enable": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "enable"
+        },
+        "FINDLIB": {
+            "global": true,
+            "resolveAsRelativePath": true,
+            "globalCollisionBehavior": "joinPath",
+            "val": "./_build/ocamlfind/lib"
+        },
+        "version": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "1.19.2"
+        },
+        "PATH": {
+            "global": true,
+            "resolveAsRelativePath": true,
+            "globalCollisionBehavior": "joinPath",
+            "val": "./_build/ocamlfind/bin"
+        },
+        "utop_installed": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "true"
+        }
+    },
+    "name": "utop",
+    "dependencies": {
+        "react": "https://github.com/npm-opam/react",
+        "ocamlbuild": "https://github.com/npm-opam/ocamlbuild",
+        "lambda-term": "https://github.com/npm-opam/lambda-term",
+        "base-unix": "https://github.com/npm-opam/base-unix",
+        "ocamlfind": "https://github.com/npm-opam/ocamlfind",
+        "camlp4": "https://github.com/npm-opam/camlp4",
+        "ocaml": "https://github.com/npm-opam/ocaml.git#npm-4.02.3",
+        "lwt": "https://github.com/npm-opam/lwt",
+        "dependency-env": "https://github.com/npm-ml/dependency-env.git",
+        "substs": "https://github.com/yunxing/substs.git",
+        "ppx_tools": "https://github.com/npm-opam/ppx_tools",
+        "base-threads": "https://github.com/npm-opam/base-threads",
+        "cppo": "https://github.com/npm-opam/cppo",
+        "nopam": "https://github.com/yunxing/nopam.git",
+        "opam-installer-bin": "https://github.com/yunxing/opam-installer-bin.git"
+    },
+    "scripts": {
+        "postinstall": "eval $(dependencyEnv) && nopam && ./configure --prefix $opam_prefix --${camlp4_enable:-disable}-camlp4 --${ppx_tools_enable:-disable}-interact && make && make install && (opam-installer --prefix=$opam_prefix || true)"
+    }
+}
