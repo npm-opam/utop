@@ -6,7 +6,7 @@
 <**/*.ml>: warn(-3-40)
 
 # OASIS_START
-# DO NOT EDIT (digest: 0e8c977c59cd4b29b0e0ba0f7c9f1d20)
+# DO NOT EDIT (digest: be1cb973d2af74270165394d75f04ba8)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -34,15 +34,15 @@ true: annot, bin_annot
 <src/camlp4/*.ml{,i,y}>: package(threads)
 <src/camlp4/*.ml{,i,y}>: use_utop
 # Executable utop
-"src/top/uTop_top.byte": package(findlib)
-"src/top/uTop_top.byte": package(lambda-term)
-"src/top/uTop_top.byte": package(threads)
-"src/top/uTop_top.byte": use_utop
+"src/top/uTop_top.native": package(findlib)
+"src/top/uTop_top.native": package(lambda-term)
+"src/top/uTop_top.native": package(threads)
+"src/top/uTop_top.native": use_utop
 # Executable utop-full
-"src/top/uTop_top_full.byte": package(findlib)
-"src/top/uTop_top_full.byte": package(lambda-term)
-"src/top/uTop_top_full.byte": package(threads)
-"src/top/uTop_top_full.byte": use_utop
+"src/top/uTop_top_full.native": package(findlib)
+"src/top/uTop_top_full.native": package(lambda-term)
+"src/top/uTop_top_full.native": package(threads)
+"src/top/uTop_top_full.native": use_utop
 <src/top/*.ml{,i,y}>: package(findlib)
 <src/top/*.ml{,i,y}>: package(lambda-term)
 <src/top/*.ml{,i,y}>: package(threads)
