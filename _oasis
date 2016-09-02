@@ -68,7 +68,7 @@ Library "utop-camlp4"
 Executable utop
   Install: true
   Path: src/top
-  CompiledObject: byte
+  CompiledObject: best
   MainIs: uTop_top.ml
   BuildDepends: threads, findlib, lambda-term, utop
   DataFiles: utop.el ($datadir/emacs/site-lisp)
@@ -76,7 +76,7 @@ Executable utop
 Executable "utop-full"
   Install: true
   Path: src/top
-  CompiledObject: byte
+  CompiledObject: best
   MainIs: uTop_top_full.ml
   BuildDepends: threads, findlib, lambda-term, utop
   DataFiles: utop.el ($datadir/emacs/site-lisp)
